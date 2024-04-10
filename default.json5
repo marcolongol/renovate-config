@@ -1,0 +1,21 @@
+{
+    $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+    extends: [
+        'config:recommended',
+        ':enableRenovate',
+        ':disableRateLimiting',
+        ':enableVulnerabilityAlerts',
+        ':dependencyDashboard',
+        ':automergeDigest',
+        ':gitSignOff',
+        'github>marcolongol/renovate-config:semantic-commits.json5',
+        'github>marcolongol/renovate-config:labels.json5',
+    ],
+    platform: 'github',
+    dependencyDashboardTitle: 'Renovate Dashboard',
+    suppressNotifications: ['prIgnoreNotification'],
+    onboarding: false,
+    requireConfig: 'optional',
+    rebaseWhen: 'conflicted',
+    timezone: 'America/Los_Angeles',
+}

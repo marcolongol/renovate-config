@@ -1,0 +1,50 @@
+{
+    $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+    labels: ['renovatebot'],
+    packageRules: [
+        {
+            matchUpdateTypes: ['major'],
+            addLabels: ['type/major'],
+        },
+        {
+            matchUpdateTypes: ['minor'],
+            addLabels: ['type/minor'],
+        },
+        {
+            matchUpdateTypes: ['patch'],
+            addLabels: ['type/patch'],
+        },
+        {
+            matchUpdateTypes: ['digest'],
+            addLabels: ['type/digest'],
+        },
+        {
+            matchDatasources: ['docker'],
+            addLabels: ['renovate/container'],
+        },
+        {
+            matchDatasources: ['helm'],
+            addLabels: ['renovate/helm'],
+        },
+        {
+            matchDatasources: ['terraform-provider'],
+            addLabels: ['renovate/terraform'],
+        },
+        {
+            matchDatasources: ['galaxy-collection', 'galaxy-role'],
+            addLabels: ['renovate/ansible'],
+        },
+        {
+            matchDatasources: ['github-releases', 'github-tags'],
+            addLabels: ['renovate/github-release'],
+        },
+        {
+            matchManagers: ['github-actions'],
+            addLabels: ['renovate/github-action'],
+        },
+        {
+            matchManagers: ['gomod'],
+            addLabels: ['renovate/go-module'],
+        },
+    ],
+}
