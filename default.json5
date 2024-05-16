@@ -5,6 +5,7 @@
         ':enableRenovate',
         ':disableRateLimiting',
         ':enableVulnerabilityAlerts',
+        'mergeConfidence:all-badges',
         ':dependencyDashboard',
         ':automergeDigest',
         ':gitSignOff',
